@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Quiz</title>
+  </head>
+  <body class="bg-light py-5">
+
+    
+    <section id="setting" class="w-100">
+      <div class="bg-white w-50 m-auto shadow-lg overflow-auto">
+        <div class="border-bottom overflow-auto">
+          <h1 class="header-setting">Setting Your Quiz</h1>
+        </div>
+        <div class="mt-4">
+          <label for="category" class="pb-1 text-muted">Category</label>
+          <select name="category" id="category" class="form-control text-muted">
+            <option value="9">General Knowledge</option>
+            <option value="27">Animals</option>
+            <option value="15">Video Games</option>
+            <option value="23">History</option>
+            <option value="21">Sports</option>
+            <option value="18">Science: Computers</option>
+          </select>
+        </div>
+        <div>
+          <label for="difficulty" class="text-muted pt-4 pb-1"
+            >Difficulty</label
+          >
+          <div id="difficulty" class="d-flex flex-column">
+            <label id="easy">
+              <input
+                type="radio"
+                value="easy"
+                name="difficulty"
+                id="easy"
+                checked
+              />
+              Easy
+            </label>
+            <label id="medium">
+              <input
+                type="radio"
+                value="medium"
+                name="difficulty"
+                id="medium"
+              />
+              Medium
+            </label>
+            <label id="hard">
+              <input type="radio" value="hard" name="difficulty" id="hard" />
+              Hard
+            </label>
+          </div>
+        </div>
+        <div class="pt-4">
+          <input
+            type="number"
+            class="form-control"
+            id="questionsNumber"
+            placeholder="Number Of Questions"
+            required
+          />
+        </div>
+        <button id="startBtn" class="btn">Start</button>
+      </div>
+    </section>
+
+
+    <section id="quiz" class="w-100">
+      <div class="bg-white w-50 m-auto shadow-lg overflow-auto">
+        <div class="border-bottom overflow-auto">
+          <h1 class="header-setting">Quiz</h1>
+          <span class="quetions"
+            ><span id="currentQuestion"></span> of
+            <span id="totalNumber"></span> Question</span
+          >
+          <span id="inCorrect" class="alert alert-danger float-left w-50"
+            >InCorrect</span
+          >
+          <span id="Correct" class="alert alert-success float-left w-50"
+            >Correct</span
+          >
+        </div>
+        <div class="mt-4">
+          <h5 class="d-inline">Q:</h5>
+          <h5 id="question" class="d-inline"></h5>
+          <div id="rowAnswer" class="d-flex flex-column pt-2"></div>
+          <div id="alert" class="alert alert-danger float-left mt-4">Please Enter Your Answer</div>
+          <button id="next" class="btn">Submit</button>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="finish" class="w-100">
+      <div class="bg-white w-50 m-auto shadow-lg overflow-auto">
+        <div class="border-bottom overflow-auto">
+          <h1 class="header-setting">Finish</h1>
+        </div>
+        <div class="score mt-4">
+          <p>score</p>
+          <p id="score"></p>
+        </div>
+        <button id="again" class="btn">Try Again?</button>
+      </div>
+    </section>
+
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/script.js" type="module"></script>
+  </body>
+</html>
